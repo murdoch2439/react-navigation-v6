@@ -4,7 +4,7 @@ import HomeScreen from "../screens/homeScreen";
 import ProfileScreen from "../screens/profileScreen";
 import MessagesScreen from "../screens/messagesScreens";
 import SettingsScreen from "../screens/settingsScreen";
-import CustomDrawer from "./customDrawer";
+import CustomDrawer from "../components/customNavigator/customDrawer";
 import { AntDesign, Feather } from '@expo/vector-icons';
 import fontSize from "../components/themes/fontSize";
 import colors from "../components/themes/colors";

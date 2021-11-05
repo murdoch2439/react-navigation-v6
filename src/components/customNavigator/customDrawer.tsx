@@ -1,7 +1,7 @@
 import React, {FunctionComponent} from 'react'
 import {Image, ImageBackground, StyleSheet, Text, TouchableOpacity, View} from "react-native";
 import {DrawerContentScrollView, DrawerItemList} from '@react-navigation/drawer'
-import colors from "../components/themes/colors";
+import colors from "../themes/colors";
 import { AntDesign } from '@expo/vector-icons';
 
 type props={
@@ -13,8 +13,8 @@ const CustomDrawer : FunctionComponent<props> = (props) =>{
     return(
         <View style={styles.container}>
             <DrawerContentScrollView {...props} contentContainerStyle={styles.drawerStyle}  >
-                <ImageBackground source={require('../../assets/bg.png')} style={{padding:20}} >
-                <Image source={require('../../assets/profile.jpg')} style={styles.image} />
+                <ImageBackground source={require('../../../assets/bg.png')} style={{padding:20}} >
+                <Image source={require('../../../assets/profile.jpg')} style={styles.image} />
                 <Text style={{fontWeight:'bold', fontSize:18}}>James Paul</Text>
                 <Text style={{color:colors.black}}>Followers 530K</Text>
                 </ImageBackground>
