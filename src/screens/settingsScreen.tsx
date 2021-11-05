@@ -1,0 +1,22 @@
+import React, {FunctionComponent} from 'react'
+import {StyleSheet, Text, View} from "react-native";
+
+
+
+
+const SettingsScreen : FunctionComponent = () =>{
+    return(
+        <View style={styles.container}>
+            <Text>SettingsScreen</Text>
+        </View>
+    )
+}
+
+const styles = StyleSheet.create({
+    container:{
+        flex:1,
+        justifyContent:'center',
+        alignItems:'center',
+    }
+})
+export default SettingsScreen
