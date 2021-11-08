@@ -23,3 +23,7 @@ export const SIGN_UP = 'Inscription';
 export const CONFIRMATION = 'Confirmation';
 export const NOTIFICATIONSDISABLED = 'Notifications';
 export const ONBOARDING = 'Onboarding'
+
+export const SETTINGS_SCREEN = 'Settings'
+export const MESSAGES_SCREEN = 'Messages'
+export const PROFILE_SCREEN = 'Profile'

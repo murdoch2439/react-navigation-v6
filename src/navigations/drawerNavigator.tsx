@@ -9,17 +9,18 @@ import { AntDesign, Feather } from '@expo/vector-icons';
 import fontSize from "../components/themes/fontSize";
 import colors from "../components/themes/colors";
 import HeaderComponent from "../components/headers/headerComponent";
+import HomeStack from "./homeStack";
 
 const Drawer = createDrawerNavigator()
 
 
 const DrawerNavigator : FunctionComponent = () =>{
     return(
-        <Drawer.Navigator screenOptions={{drawerLabelStyle:{marginLeft:-25, fontSize:15,}, drawerActiveBackgroundColor:colors.primary, drawerActiveTintColor:colors.white, drawerInactiveTintColor:colors.accent}} drawerContent={props => <CustomDrawer {...props} />} initialRouteName={'Home'}>
-            <Drawer.Screen name={'Home'} component={HomeScreen} options={{
+        <Drawer.Navigator  screenOptions={{drawerLabelStyle:{marginLeft:-25, fontSize:15,}, drawerActiveBackgroundColor:colors.primary, drawerActiveTintColor:colors.white, drawerInactiveTintColor:colors.accent, drawerType:'slide'}} drawerContent={(props) => <CustomDrawer {...props} />} initialRouteName={'Home'}>
+            <Drawer.Screen name={'Home'} component={HomeStack} options={{
                 drawerIcon:({color,}) =>(
                     <AntDesign name="home" size={24} color={color} />
-                ) , header:({navigation})=> <HeaderComponent navigation={navigation} />
+                ) , headerShown:false,
             }}  />
             <Drawer.Screen name={'Profile'} component={ProfileScreen} options={{
                 drawerIcon:({color,}) =>(
