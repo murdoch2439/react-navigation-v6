@@ -16,7 +16,7 @@ const HeaderComponent: FunctionComponent<props> = ({navigation}) => {
     return (
         <View style={styles.container}>
             <Text style={styles.title}>Hello James Paul</Text>
-            <TouchableOpacity onPress={openDrawerMenu} style={styles.profile}>
+            <TouchableOpacity activeOpacity={0.6} onPress={openDrawerMenu} style={styles.profile}>
                 <Image source={require('../../../assets/profile.jpg')} style={styles.image}/>
             </TouchableOpacity>
 
@@ -29,12 +29,12 @@ const styles = StyleSheet.create({
     container:{
         flexDirection:'row',
         backgroundColor:colors.primary,
-        height:80,
+        height:60,
         justifyContent:'space-between',
         alignItems:'center',
         paddingHorizontal:25,
-        borderBottomRightRadius:50,
-        borderBottomLeftRadius:50,
+        // borderBottomRightRadius:50,
+        // borderBottomLeftRadius:50,
         // borderBottomWidth:0.7,
         // borderBottomColor:colors.success,
         // borderRightColor:colors.success,
@@ -47,7 +47,8 @@ const styles = StyleSheet.create({
     },
     title:{
         fontSize:16,
-        fontWeight:'bold'
+        fontWeight:'bold',
+        color:colors.white,
     },
     menu:{
         fontSize:25,

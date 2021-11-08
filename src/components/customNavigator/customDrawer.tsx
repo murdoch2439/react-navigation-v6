@@ -1,15 +1,21 @@
-import React, {FunctionComponent} from 'react'
+import React, {FunctionComponent, useEffect} from 'react'
 import {Image, ImageBackground, StyleSheet, Text, TouchableOpacity, View} from "react-native";
 import {DrawerContentScrollView, DrawerItemList} from '@react-navigation/drawer'
 import colors from "../themes/colors";
 import { AntDesign } from '@expo/vector-icons';
 
 type props={
-    props:any
+    props:any,
+    descriptor?:any
 }
 
 
 const CustomDrawer : FunctionComponent<props> = (props) =>{
+
+    useEffect(()=>{
+        console.log('Props ==>', props)
+    }, [])
+
     return(
         <View style={styles.container}>
             <DrawerContentScrollView {...props} contentContainerStyle={styles.drawerStyle}  >
@@ -19,6 +25,7 @@ const CustomDrawer : FunctionComponent<props> = (props) =>{
                 <Text style={{color:colors.black}}>Followers 530K</Text>
                 </ImageBackground>
                 <View style={styles.itemList}>
+
                     <DrawerItemList {...props}  />
                 </View>
 
