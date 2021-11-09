@@ -16,7 +16,7 @@ const Drawer = createDrawerNavigator()
 
 const DrawerNavigator : FunctionComponent = () =>{
     return(
-        <Drawer.Navigator  screenOptions={{drawerLabelStyle:{marginLeft:-25, fontSize:15,}, drawerActiveBackgroundColor:colors.primary, drawerActiveTintColor:colors.white, drawerInactiveTintColor:colors.accent, drawerType:'slide'}} drawerContent={(props) => <CustomDrawer {...props} />} initialRouteName={'Home'}>
+        <Drawer.Navigator  screenOptions={{drawerLabelStyle:{marginLeft:-25, fontSize:15,}, drawerStyle:{flex:1, width:'65%', paddingRight:20, backgroundColor:'transparent'}, sceneContainerStyle:{backgroundColor:'transparent'}, drawerActiveBackgroundColor:colors.primary, drawerActiveTintColor:colors.white, drawerInactiveTintColor:colors.accent, drawerType:'slide', overlayColor:'transparent',}} drawerContent={(props) => <CustomDrawer {...props} />} initialRouteName={'Home'}>
             <Drawer.Screen name={'Home'} component={HomeStack} options={{
                 drawerIcon:({color,}) =>(
                     <AntDesign name="home" size={24} color={color} />
