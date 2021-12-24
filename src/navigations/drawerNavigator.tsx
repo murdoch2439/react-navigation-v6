@@ -16,27 +16,53 @@ const Drawer = createDrawerNavigator()
 
 const DrawerNavigator : FunctionComponent = () =>{
     return(
-        <Drawer.Navigator  screenOptions={{drawerLabelStyle:{marginLeft:-25, fontSize:15,}, drawerStyle:{flex:1, width:'65%', paddingRight:20, backgroundColor:'transparent'}, sceneContainerStyle:{backgroundColor:'transparent'}, drawerActiveBackgroundColor:colors.primary, drawerActiveTintColor:colors.white, drawerInactiveTintColor:colors.accent, drawerType:'slide', overlayColor:'transparent',}} drawerContent={(props) => <CustomDrawer {...props} />} initialRouteName={'Home'}>
-            <Drawer.Screen name={'Home'} component={HomeStack} options={{
+        <Drawer.Navigator
+            screenOptions={{
+                drawerLabelStyle:{marginLeft:-25, fontSize:15,},
+                drawerStyle:{flex:1, width:'65%', paddingRight:20, backgroundColor:'transparent'}, sceneContainerStyle:{backgroundColor:'transparent'},
+                drawerActiveBackgroundColor:colors.primary,
+                drawerActiveTintColor:colors.white,
+                drawerInactiveTintColor:colors.accent,
+                drawerType:'slide', overlayColor:'transparent',
+            }}
+            drawerContent={(props) => <CustomDrawer {...props} />} initialRouteName={'Home'}
+        >
+            <Drawer.Screen
+                name={'Home'}
+                component={HomeStack}
+                options={{
                 drawerIcon:({color,}) =>(
                     <AntDesign name="home" size={24} color={color} />
                 ) , headerShown:false,
-            }}  />
-            <Drawer.Screen name={'Profile'} component={ProfileScreen} options={{
+                }}
+            />
+            <Drawer.Screen
+                name={'Profile'}
+                component={ProfileScreen}
+                options={{
                 drawerIcon:({color,}) =>(
                     <Feather name="user" size={24} color={color} />
                 )
-            }} />
-            <Drawer.Screen name={'Messages'} component={MessagesScreen} options={{
+                }}
+            />
+            <Drawer.Screen
+                name={'Messages'}
+                component={MessagesScreen}
+                options={{
                 drawerIcon:({color,}) =>(
                     <AntDesign name="message1" size={24} color={color} />
                 )
-            }} />
-            <Drawer.Screen name={'Settings'} component={SettingsScreen} options={{
+                }}
+            />
+            <Drawer.Screen
+                name={'Settings'}
+                component={SettingsScreen}
+                options={{
                 drawerIcon:({color,}) =>(
                     <AntDesign name="setting" size={24} color={color} />
                 )
-            }}/>
+                }}
+            />
         </Drawer.Navigator>
     )
 }

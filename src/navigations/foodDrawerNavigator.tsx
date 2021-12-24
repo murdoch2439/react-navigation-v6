@@ -17,6 +17,22 @@ type props={
 }
 
 
+function mapStateTopProps(state:any){
+    return {
+        selectedTab:state.tabReducer.selectedTab
+    }
+}
+
+function mapDispatchToProps(dispatch:any){
+    return {
+        selectedTab:(selectedTab:any) => {
+            return dispatch(setSelectedTab(selectedTab))
+        }
+    }
+
+}
+
+
 const  FoodDeliveryDrawer : FunctionComponent<props> = ({selectedTab, setSelectedTab}) =>{
     const [progress, setProgress] = useState(new Animated.Value(0))
 
@@ -59,19 +75,6 @@ const styles = StyleSheet.create({
 
 
 
-function mapStateTopProps(state:any){
-    return {
-        selectedTab:state.tabReducer.selectedTab
-    }
-}
 
-function mapDispatchToProps(dispatch:any){
-    return {
-        selectedTab:(selectedTab:any) => {
-            return dispatch(setSelectedTab(selectedTab))
-        }
-    }
-
-}
 
 export default connect(mapStateTopProps, mapDispatchToProps)(FoodDeliveryDrawer)

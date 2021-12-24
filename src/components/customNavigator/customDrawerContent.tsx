@@ -43,9 +43,9 @@ const CustomDrawerContent : FunctionComponent<props> = ({navigation, selectedTab
                         isFocused = {selectedTab === 'Home'}
                         icon={<AntDesign name="home" size={24} color={colors.white}  />}
                         onPress={()=> {
-                            console.log(selectedTab.toString())
+                            console.log('I want to see you', selectedTab)
                         // setSelectedTab('Home')
-                        navigation.navigate('Home')
+                        // navigation.navigate('Home')
                     }} />
                     <CustomDrawerItem label={'Wallet'} icon={<AntDesign name="wallet" size={24} color={colors.white} />} onPress={()=>setSelectedTab('Wallet')} />
                     <CustomDrawerItem label={'Notification'} icon={<Ionicons name="notifications-outline" size={24} color={colors.white} />}  onPress={()=>setSelectedTab('Notification')}/>

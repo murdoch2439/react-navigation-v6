@@ -1,6 +1,5 @@
 import * as tabActionTypes from './tabAction'
 
-
 const initialState ={
     selectedTab:""
 }
@@ -14,7 +13,6 @@ const tabReducer = (state :any = initialState, action:any) =>{
               }
           default:
               return state
-
       }
 }
 

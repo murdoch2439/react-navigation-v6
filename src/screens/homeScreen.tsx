@@ -17,7 +17,9 @@ const HomeScreen : FunctionComponent<props> = ({navigation}) =>{
                 <View style={styles.content1}>
 
                 </View>
-                <View style={styles.content2}></View>
+                <View style={styles.content2}>
+
+                </View>
                 {/*<View style={{position:'absolute', height:'100%'}}>*/}
 
 

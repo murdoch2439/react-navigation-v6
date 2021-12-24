@@ -17,6 +17,8 @@ import rootReducer from "./src/stores/rootReducer";
 const store = createStore(rootReducer, applyMiddleware(thunk))
 
 
+
+
 export default function App() {
   return (
       <Provider store={store}>
